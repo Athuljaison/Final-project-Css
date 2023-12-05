@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store - Contact & Visit</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./product.html">product</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    <main>
+        <div class="contact-container">
+            <section id="contact-info">
+                <h2>Customer Support</h2>
+                <ul>
+                    <li>Phone: +1-123-456-7890</li>
+                    <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+                    <li>Address: 456 Game Street, GameCity</li>
+                    <li>Fax: +1-123-456-7891</li>
+                </ul>
+            </section>
+            <section id="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="submit_form" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <section id="location-directions">
+                <h2>Location & Directions</h2>
+                <div id="google-map">
+                </div>
+                <p>Visit us at 456 Game Street, GameCity for all your gaming needs.</p>
+                <p>Directions from major landmarks...</p>
+                <p>Public Transportation details...</p>
+            </section>
+            <section id="hours">
+                <h2>Store Hours</h2>
+                <p>Monday - Friday: 10 AM - 8 PM</p>
+                <p>Saturday - Sunday: 11 AM - 6 PM</p>
+                <p><strong>Note:</strong> Special hours on holidays...</p>
+            </section>
+            <section id="guidelines">
+                <h2>Customer Guidelines</h2>
+                <ul>
+                    <li>No food or drinks inside the store.</li>
+                    <li>Please keep noise to a minimum.</li>
+                    <li>Explore our latest game releases.</li>
+                </ul>
+            </section>
+            <section id="parking">
+                <h2>Parking & Accessibility</h2>
+                <p>Free on-site parking available. Wheelchair accessible entrance and restrooms. Elevators available for upper floors.</p>
+            </section>
+            <section id="newsletter">
+                <h2>Stay Updated</h2>
+                <form action="submit_newsletter.php" method="post">
+                    <input type="email" name="newsletter_email" placeholder="Enter your email" required>
+                    <input type="submit" value="Subscribe">
+                </form>
+            </section>
+            <div id="feedback-form">
+                <h2>Leave a Game Review</h2>
+                <form action="submit_review.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <textarea name="review" rows="5" placeholder="Your Game Review" required></textarea>
+                    <input type="submit" value="Submit Review">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Game Emporium. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

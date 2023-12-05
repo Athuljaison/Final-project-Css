@@ -1,0 +1,558 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2D2D2D;
+    color: #090a08;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+:root {
+    --primary-color: #ce0f0f;  /* Base color */
+    --accent-color-1: #80ff00;  /* Analogous color 1 */
+    --accent-color-2: #bf0c0c;  /* Analogous color 2 */
+    --accent-color-3: #f48600;  /* Analogous color 3 */
+    
+    --triadic-color-1: #0077cc;  /* Triadic color 1 */
+    --triadic-color-2: #cc7c00;  /* Triadic color 2 */
+    --triadic-color-3: #00cc7c;  /* Triadic color 3 */
+}
+
+a {
+    text-decoration: none;
+    color: var(--triadic-color-1);  /* Use triadic color as the link color */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--triadic-color-2);  /* Change color on hover for the triadic scheme */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(45, 45, 45, 0.95);
+}
+
+header, nav, .filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2D2D2D;
+    color: #ebebea;
+    align-items: center;
+}
+
+nav a, .filters select, .filters input {
+    margin: 0 10px;
+    color: #eff1eb;
+}
+
+.filters select, .filters input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e8e8e7;
+    color: #2D2D2D;
+}
+
+.filters input[type="text"]::placeholder {
+    color: #eef3ed;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/p1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.game, .featured-artworks, .offer, .testimonials {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.game-list img{
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.game-list img:hover{
+    transform: scale(1.05);
+}
+
+.game-list{
+    border: 1px solid #d0d3cc;
+    padding: 15px;
+    text-align: center;
+    background-color: #2D2D2D;
+    box-shadow: 0 4px 6px rgba(154, 205, 50, 0.1);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.game-list:hover{
+    box-shadow: 0 6px 8px rgba(154, 205, 50, 0.15);
+}
+
+button, .game-list button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2D2D2D;
+    color: #e5e8df;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .game-list button:hover {
+    background-color: #d8dcd2;
+    color: #2D2D2D;
+}
+
+.pagination, .breadcrumbs, .share {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+    background-color: #2D2D2D;
+    border-top: 1px solid #e6e8e3;
+    border-bottom: 1px solid #e6e8e2;
+}
+
+.pagination a, .breadcrumbs a, .share a {
+    padding: 5px 10px;
+    background-color: #e9eae5;
+    color: #2D2D2D;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover, .breadcrumbs a:hover, .share a:hover {
+    background-color: #2D2D2D;
+    color: #e4e9e0;
+}
+
+footer {
+    background-color: #2D2D2D;
+    color: #9ACD32;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+.featured-artworks {
+    background-color: #fff;  /* Use a contrasting color for the background */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-artworks h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #444;
+}
+
+/* Common styles for both gallery and homepage artworks */
+.game{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four artworks per row */
+    gap: 20px;
+}
+
+.game-list img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.game-list img:hover {
+    transform: scale(1.05);
+}
+
+.game-list {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+    color: #9ACD32;
+    border-bottom: 2px solid #9ACD32;
+}
+.introduction {
+    text-align: center;
+    padding: 50px 0;
+    color: #fefffb;
+}
+.game-list:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.game-list h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.game-list p {
+    margin-bottom: 10px;
+}
+
+.game-list button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-list button:hover {
+    background-color: #0055aa;
+}
+
+#about {
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('../images/bgimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about h2, #about h3 {
+    color: #a2f200;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about p,#testimonials,li {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.7;
+}
+blockquote{
+    color: #ffffff;
+}
+.game-highlights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* This will allow images to wrap if they don't fit in one line */
+    gap: 20px; /* Creates space between images */
+}
+/* Artist or Gallery Imagery */
+.game-highlights img {
+    /* styles specific to images inside the .portraits div */
+    max-width: 90%;  /* This ensures images don't become too large */
+    margin: 0 auto;  /* Centers the images if they are on separate lines */
+}
+.process {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.process img {
+    max-width: 80%;
+    margin-top: 20px; /* Add some space above the image */
+}
+
+/* Bio Section */
+.bio {
+    margin-bottom: 30px;
+}
+
+/* Awards and Recognition Styling */
+.awards {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.awards li {
+    margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+    font-style: italic;
+    position: relative;
+    padding: 10px 40px;
+    margin: 20px 0;
+    border-left: 4px solid #0077cc;
+}
+
+.testimonials blockquote:before {
+    content: "“";
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    color: #0077cc;
+}
+
+.testimonials blockquote:after {
+    content: "”";
+    font-size: 4em;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: #0077cc;
+}
+
+.testimonials cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+/* Interactive Elements */
+.videos iframe {
+    max-width: 100%;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #0077cc;
+}
+
+.social-links a:last-child {
+    margin-right: 0;
+}
+
+/* Contact Information */
+.contact {
+    margin-top: 30px;
+    text-align: center;
+}
+.contact-page {
+    background-color: #2D2D2D;
+}
+
+.contact-page h2 {
+    color: #9ACD32;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #3c32cd;
+    padding-bottom: 10px;
+}
+
+.contact-page section {
+    padding: 20px;
+    background-color: #111010;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(154, 205, 50, 0.1);
+    border-radius: 5px;
+}
+
+.contact-page ul, .contact-page form {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contact-page li, .contact-page input, .contact-page textarea {
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.contact-page input, .contact-page textarea {
+    padding: 10px;
+    border: 1px solid #78ae0a;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #2D2D2D;
+}
+
+/* General styling for the contact form section */
+/* General styling for the contact form section */
+#contact-form {
+    padding: 3px;
+    background: #333; /* Dark background so white text is visible */
+    border-radius: 7px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Making the text color white */
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    background-color: #333;
+    color: #ffffff; /* White color for the text user types */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effects */
+}
+
+/* Styling for the input and textarea focus state */
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #9ACD32; /* Highlight color when the input field is focused */
+    box-shadow: 0 0 8px rgba(154, 205, 50, 0.5); /* A subtle glow effect when focused */
+    outline: none;
+}
+
+#contact-form input[type="submit"] {
+    cursor: pointer;
+    background-color: #9ACD32;
+    color: #2D2D2D;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #79a329;
+    transform: translateY(-2px);
+}
+
+#contact-form input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.contact-container {
+    background-color: #9ACD32;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #171d0a;
+    box-shadow: 0 4px 8px rgba(154, 205, 50, 0.1);
+    border-radius: 5px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.contact-container > * {
+    margin-bottom: 20px;
+}
+.offers {
+    background-color: #2D2D2D;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px rgba(150, 216, 19, 0.1);
+    margin: 40px 0;
+}
+
+h2 {
+    color: #008080;
+    border-bottom: 2px solid #9ACD32;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.offers {
+    background-color: #9ACD32;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(45, 45, 45, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.offers h3 {
+    color: #2D2D2D;
+    margin-top: 0;
+}
+
+.offers p {
+    color: #0e0e0d;
+    margin: 10px 0;
+}
+
+.offers p:first-child {
+    font-weight: bold;
+    color: #2D2D2D;
+}
+
+.offer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.offer h2 {
+    margin-right: 50px;
+}
+
+.offer-list {
+    flex-grow: 1;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #0b0b0a;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    color: #2D2D2D;
+    background-color: #0c0d0b;
+}
+
+#contact-form button[type="submit"] {
+    cursor: pointer;
+    background-color: #0b0b0a;
+    color: #2D2D2D;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #2D2D2D;
+    color: #070706;
+}
+#gameSection a:hover {
+    color: #9ACD32;
+    border-bottom: 2px solid #9ACD32;
+}
+
+#gameSection .introduction {
+    text-align: center;
+    padding: 50px 0;
+    color: #a0cd1a;
+}
