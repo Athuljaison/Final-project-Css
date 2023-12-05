@@ -9,24 +9,24 @@ body {
 }
 
 :root {
-    --primary-color: #ce0f0f;  /* Base color */
-    --accent-color-1: #80ff00;  /* Analogous color 1 */
-    --accent-color-2: #bf0c0c;  /* Analogous color 2 */
-    --accent-color-3: #f48600;  /* Analogous color 3 */
+    --primary-color: #ce0f0f;  
+    --accent-color-1: #80ff00;  
+    --accent-color-2: #bf0c0c;  
+    --accent-color-3: #f48600;  
     
-    --triadic-color-1: #0077cc;  /* Triadic color 1 */
-    --triadic-color-2: #cc7c00;  /* Triadic color 2 */
-    --triadic-color-3: #00cc7c;  /* Triadic color 3 */
+    --triadic-color-1: #0077cc;  
+    --triadic-color-2: #cc7c00;  
+    --triadic-color-3: #00cc7c;  
 }
 
 a {
     text-decoration: none;
-    color: var(--triadic-color-1);  /* Use triadic color as the link color */
+    color: var(--triadic-color-1);  
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--triadic-color-2);  /* Change color on hover for the triadic scheme */
+    color: var(--triadic-color-2); 
 }
 
 header {
@@ -147,7 +147,7 @@ footer {
     font-size: 0.9em;
 }
 .featured-artworks {
-    background-color: #fff;  /* Use a contrasting color for the background */
+    background-color: #fff;  
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,10 +160,10 @@ footer {
     color: #444;
 }
 
-/* Common styles for both gallery and homepage artworks */
+
 .game{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four artworks per row */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
 }
 
@@ -253,33 +253,33 @@ blockquote{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* This will allow images to wrap if they don't fit in one line */
-    gap: 20px; /* Creates space between images */
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
-/* Artist or Gallery Imagery */
+
 .game-highlights img {
-    /* styles specific to images inside the .portraits div */
-    max-width: 90%;  /* This ensures images don't become too large */
-    margin: 0 auto;  /* Centers the images if they are on separate lines */
+   
+    max-width: 90%; 
+    margin: 0 auto;  
 }
 .process {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
 
 .process img {
     max-width: 80%;
-    margin-top: 20px; /* Add some space above the image */
+    margin-top: 20px; 
 }
 
-/* Bio Section */
+
 .bio {
     margin-bottom: 30px;
 }
 
-/* Awards and Recognition Styling */
+
 .awards {
     list-style-type: square;
     padding-left: 20px;
@@ -290,7 +290,7 @@ blockquote{
     margin-bottom: 10px;
 }
 
-/* Testimonials */
+
 .testimonials blockquote {
     font-style: italic;
     position: relative;
@@ -323,20 +323,20 @@ blockquote{
     font-size: 0.9em;
 }
 
-/* Interactive Elements */
+
 .videos iframe {
     max-width: 100%;
     border: none;
     margin-bottom: 20px;
 }
 
-/* Call to Action */
+
 .cta {
     text-align: center;
     margin: 30px 0;
 }
 
-/* Social Links */
+
 .social-links a {
     display: inline-block;
     margin-right: 15px;
@@ -348,7 +348,7 @@ blockquote{
     margin-right: 0;
 }
 
-/* Contact Information */
+
 .contact {
     margin-top: 30px;
     text-align: center;
@@ -392,14 +392,14 @@ blockquote{
     color: #2D2D2D;
 }
 
-/* General styling for the contact form section */
-/* General styling for the contact form section */
+
+
 #contact-form {
     padding: 3px;
-    background: #333; /* Dark background so white text is visible */
+    background: #333; 
     border-radius: 7px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    color: #ffffff; /* Making the text color white */
+    color: #ffffff; 
 }
 
 #contact-form input, #contact-form textarea {
@@ -409,14 +409,14 @@ blockquote{
     font-size: 1em;
     width: 100%;
     background-color: #333;
-    color: #ffffff; /* White color for the text user types */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effects */
+    color: #ffffff; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Styling for the input and textarea focus state */
+
 #contact-form input:focus, #contact-form textarea:focus {
-    border-color: #9ACD32; /* Highlight color when the input field is focused */
-    box-shadow: 0 0 8px rgba(154, 205, 50, 0.5); /* A subtle glow effect when focused */
+    border-color: #9ACD32; 
+    box-shadow: 0 0 8px rgba(154, 205, 50, 0.5); 
     outline: none;
 }
 
